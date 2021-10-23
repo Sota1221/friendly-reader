@@ -24,3 +24,8 @@ function changeFontSize() {
   document.getElementById("check").style.fontSize = fontSizeList[fontSizeIndex] + '%';
   fontSizeIndex = (fontSizeIndex + 1) % fontSizeList.length;
 }
+
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
