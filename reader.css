@@ -5,6 +5,9 @@ body {
 /* .outputTextBox {
   width: 100%;
 } */
+.w100 {
+  width: 100%;
+}
 
 .w90 {
   width: 90%;
@@ -24,4 +27,12 @@ body {
 
 .w50 {
   width: 50%;
+}
+
+.w40 {
+  width: 40%;
+}
+
+.w30 {
+  width: 30%;
 }
