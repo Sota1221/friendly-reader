@@ -11,41 +11,31 @@
     <div class='fixed-top'>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Friendly Reader</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">ユーザ<span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">新規プロジェクト</a>
-                    <a class="nav-item nav-link" href="#">モーメント</a>
-                    <a class="nav-item nav-link" href="#">アプリ紹介</a>
-                </div>
-            </div>
+            <button onclick="myFunction()">Toggle dark mode</button>
+            <button type="button" class="btn btn-warning" onclick="changeWidth()">Change Width</button>
+                <button type="button" onclick="changeFontSize()">
+                    Change Font Size</button>
         </nav>
     </div>
-    <button onclick="myFunction()">Toggle dark mode</button>
     <div class="container border">
-        <p class="mt-3">Copy and paste what you want to read here ↓</p>
         <div class="border">
+            <h1>How to Use</h1>
+        <p class="mt-3">Copy and paste what you want to read here ↓</p>
             <!-- <label class="">
                 <input type="text" id="inputForm">
             </label> -->
+            <h1>Input</h1>
             <textarea id="largeInputForm" class ="center-block col-12" rows="10 cols="60" onkeyup="inputCheck()"></textarea>
-            <div class="mt-4 mb-4">
-                <button type="button" class="btn btn-primary">Submit</button>
-            </div>
+            <h1>Output</h1>
             <div class="d-flex justify-content-center">
                 <div id ="outputBox" class="border w100">
                     <div id="check" class=" mt-4">
                     </div>
                 </div>
             </div>
-            <div class="mt-4 mb-4">
-                <button type="button" class="btn btn-warning" onclick="changeWidth()">Change Width</button>
-                <button type="button" onclick="changeFontSize()">
-                    Change Font Size</button>
-            </div>
+            <!-- <div class="mt-4 mb-4">
+
+            </div> -->
         </div>
     </div>
   </body>
