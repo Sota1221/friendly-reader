@@ -45,16 +45,19 @@ function myFunction() {
 }
 
 const open = document.getElementById("open");
-const modal_container = document.getElementById("modal_container");
+const modal_container_top = document.getElementById("modal_container-top");
+const modal_container_bottom = document.getElementById("modal_container-bottom");
 const close = document.getElementById("close");
 console.log(open);
-console.log(modal_container);
-console.log(close);
+console.log(modal_container_top);
+console.log(modal_container_bottom);
+
 
 open.addEventListener("click", () => {
-  modal_container.classList.add("show");
+  modal_container_top.classList.toggle("show");
+  modal_container_bottom.classList.toggle("show");
 });
 
-close.addEventListener("click", () => {
-  modal_container.classList.remove("show");
-});
+// close.addEventListener("click", () => {
+//   modal_container.classList.remove("show");
+// });

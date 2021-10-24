@@ -194,24 +194,44 @@ input:checked ~ .switch:after {
   opacity: 0.5;
 }
 
-.modal-container {
-  background-color: rgba(0, 0, 0, 0.3);
-  display: flex;
+.modal-container-top {
+  background-color: black;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   position: fixed;
   /* padding-top: 130px; */
   opacity: 0;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 47.5vh;
   width: 100vw;
   pointer-events: none;
 }
 
-.modal-container.show {
+.modal-container-bottom {
+  background-color: black;
+  /* display: flex;
+    align-items: center;
+    justify-content: center; */
+  position: fixed;
+  /* padding-top: 130px; */
+  opacity: 0;
+  bottom: 0;
+  left: 0;
+  height: 47.5vh;
+  width: 100vw;
+  pointer-events: none;
+}
+
+.modal-container-top.show {
   pointer-events: auto;
-  opacity: 1;
+  opacity: 0.7;
+}
+
+.modal-container-bottom.show {
+  pointer-events: auto;
+  opacity: 0.7;
 }
 
 .myModal {
