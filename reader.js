@@ -43,14 +43,25 @@ let fontWeightList = ["normal", "bold"];
 let fontWeightIndex = 1;
 
 function changeFontWeight() {
-  console.log("hello");
-  console.log(fontWeightList[fontWeightIndex]);
   fontElem = document.getElementById("check")
   fontElem.classList.remove(currFontWeight);
   currFontWeight = fontWeightList[fontWeightIndex];
   fontElem.classList.add(currFontWeight);
   fontWeightIndex = (fontWeightIndex + 1) % fontWeightList.length;
 }
+
+let fontList = ["poppins", "roboto", "open-sans", "noto-sans-japanese", "lato", "eb-garamond"];
+let currFont = "poppins";
+let fontIndex = 1;
+
+function changeFont() {
+  fontElem = document.getElementById("check");
+  fontElem.classList.remove(currFont);
+  currFont = fontList[fontIndex];
+  fontElem.classList.add(currFont);
+  fontIndex = (fontIndex + 1) % fontList.length;
+}
+
 
 function myFunction() {
   var element = document.body;

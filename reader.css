@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -9,6 +19,30 @@ body {
   padding-top: 150px;
   background-color: white;
   color: black;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+
+.noto-sans-japanese {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.lato {
+  font-family: "Lato", sans-serif;
+}
+
+.eb-garamond {
+  font-family: "EB Garamond", serif;
 }
 
 .dark-mode {
