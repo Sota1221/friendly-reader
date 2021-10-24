@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,10 +6,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  padding-top: 60px;
+  padding-top: 150px;
   background-color: white;
   color: black;
-  font-size: 25px;
 }
 
 .dark-mode {
@@ -20,18 +19,6 @@ body {
 .outputTextBox {
   height: 300px;
 }
-
-/* .rulerTop {
-  height: 22vh;
-  width: 100vw;
-  background-color: rgb(29, 28, 28);
-}
-
-.rulerBottom {
-  height: 22vh;
-  width: 100vw;
-  background-color: rgb(29, 28, 28);
-} */
 
 .h10 {
   height: 30px;
@@ -110,46 +97,6 @@ input:checked ~ .switch:after {
   background: darkgray;
   left: -1.1em;
 }
-/*
-.fixed01 {
-  position: sticky;
-  top: 100px;
-  color: #fff;
-  background: #333;
-  &:before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #ccc;
-  }
-} */
-
-/* .relative {
-  position: relative;
-}
-
-.absoluteTop {
-  position: absolute;
-  top: 0px;
-}
-
-.absoluteBottom {
-  position: absolute;
-  bottom: 0px;
-} */
-
-/* .fullOverlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(100, 100, 100, 0.8);
-  z-index: 2147483647;
-} */
 
 .color-overlay {
   width: 100%;
@@ -159,31 +106,6 @@ input:checked ~ .switch:after {
   position: absolute;
 }
 
-/* .Frame {
-  text-align: left;
-  margin: 2rem auto 0 auto;
-  background-color: #0022c3;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-  width: 420px;
-  box-shadow: 0 0 24px #4cff00;
-  mix-blend-mode: overlay;
-} */
-
-/* .textLayer {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  opacity: 0.2;
-  line-height: 1;
-  background: #000;
-  opacity: 0.9;
-} */
-
 .page-container {
   position: relative;
 }
@@ -192,6 +114,14 @@ input:checked ~ .switch:after {
   z-index: 1;
   background-color: white;
   opacity: 0.5;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .vh40 {
@@ -210,46 +140,60 @@ input:checked ~ .switch:after {
   height: 47.5vh;
 }
 
+.vh48andHalf {
+  height: 48.5vh;
+}
+
 .modal-container-top {
   background-color: black;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   position: fixed;
-  /* padding-top: 130px; */
   opacity: 0;
   top: 0;
   left: 0;
-  /* height: 47.5vh; */
   width: 100vw;
   pointer-events: none;
 }
 
 .modal-container-bottom {
   background-color: black;
-  /* display: flex;
-    align-items: center;
-    justify-content: center; */
   position: fixed;
-  /* padding-top: 130px; */
   opacity: 0;
   bottom: 0;
   left: 0;
-  /* height: 47.5vh; */
   width: 100vw;
   pointer-events: none;
 }
 
 .modal-container-top.show {
   pointer-events: auto;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .modal-container-bottom.show {
   pointer-events: auto;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .myModal {
   background-color: white;
+}
+
+.bottom-box {
+  height: 450px;
+}
+
+.explanation {
+  font-size: 20px;
+}
+
+.white-box {
+  height: 100px;
+}
+
+#footer {
+  padding: 18px 0;
+  color: black;
+  font-size: 0.8rem;
+  text-align: center;
+  background-color: #f8f9fa;
 }

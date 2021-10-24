@@ -28,7 +28,6 @@ let lineHeightList = [140, 160, 180, 200, 220, 240, 260, 280, 300];
 let lineHeightIndex = 1;
 
 
-
 function changeFontSize() {
   document.getElementById("check").style.fontSize = fontSizeList[fontSizeIndex] + '%';
   fontSizeIndex = (fontSizeIndex + 1) % fontSizeList.length;
@@ -37,6 +36,20 @@ function changeFontSize() {
 function changeLineHeight() {
   document.getElementById("check").style.lineHeight = lineHeightList[lineHeightIndex] + '%';
   lineHeightIndex = (lineHeightIndex + 1) % lineHeightList.length;
+}
+
+let currFontWeight = "normal"
+let fontWeightList = ["normal", "bold"];
+let fontWeightIndex = 1;
+
+function changeFontWeight() {
+  console.log("hello");
+  console.log(fontWeightList[fontWeightIndex]);
+  fontElem = document.getElementById("check")
+  fontElem.classList.remove(currFontWeight);
+  currFontWeight = fontWeightList[fontWeightIndex];
+  fontElem.classList.add(currFontWeight);
+  fontWeightIndex = (fontWeightIndex + 1) % fontWeightList.length;
 }
 
 function myFunction() {
@@ -49,18 +62,20 @@ const close = document.getElementById("close");
 
 
 
-let rulerHeightList = ["vh40", "vh42andHalf", "vh45", "vh47andHalf", null];
+let rulerHeightList = ["vh40", "vh42andHalf", "vh45", "vh47andHalf", "vh48andHalf", null];
 let rulerHeightIndex = 0;
 let currRulerHeight = "vhInit";
+let isFirst = true;
 
 open.addEventListener("click", () => {
-  const modal_container_top = document.getElementById("modal_container-top");
-  const modal_container_bottom = document.getElementById("modal_container-bottom");
-  console.log(currRulerHeight);
-  modal_container_top.classList.remove(currRulerHeight);
-  modal_container_bottom.classList.remove(currRulerHeight);
-  console.log(modal_container_top);
-  console.log(rulerHeightIndex);
+  const modal_container_top = document.getElementById("modal_container_top");
+  const modal_container_bottom = document.getElementById("modal_container_bottom");
+  if (isFirst) {
+    isFirst = false;
+  } else {
+    modal_container_top.classList.remove(currRulerHeight);
+    modal_container_bottom.classList.remove(currRulerHeight);
+  }
   currRulerHeight = rulerHeightList[rulerHeightIndex];
   modal_container_top.classList.add(currRulerHeight);
   modal_container_bottom.classList.add(currRulerHeight);
