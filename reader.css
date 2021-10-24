@@ -194,6 +194,22 @@ input:checked ~ .switch:after {
   opacity: 0.5;
 }
 
+.vh40 {
+  height: 40vh;
+}
+
+.vh42andHalf {
+  height: 42.5vh;
+}
+
+.vh45 {
+  height: 45vh;
+}
+
+.vh47andHalf {
+  height: 47.5vh;
+}
+
 .modal-container-top {
   background-color: black;
   /* display: flex;
@@ -204,7 +220,7 @@ input:checked ~ .switch:after {
   opacity: 0;
   top: 0;
   left: 0;
-  height: 47.5vh;
+  /* height: 47.5vh; */
   width: 100vw;
   pointer-events: none;
 }
@@ -219,7 +235,7 @@ input:checked ~ .switch:after {
   opacity: 0;
   bottom: 0;
   left: 0;
-  height: 47.5vh;
+  /* height: 47.5vh; */
   width: 100vw;
   pointer-events: none;
 }

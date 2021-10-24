@@ -45,17 +45,35 @@ function myFunction() {
 }
 
 const open = document.getElementById("open");
-const modal_container_top = document.getElementById("modal_container-top");
-const modal_container_bottom = document.getElementById("modal_container-bottom");
 const close = document.getElementById("close");
-console.log(open);
-console.log(modal_container_top);
-console.log(modal_container_bottom);
 
+
+
+let rulerHeightList = ["vh40", "vh42andHalf", "vh45", "vh47andHalf", null];
+let rulerHeightIndex = 0;
+let currRulerHeight = "vhInit";
 
 open.addEventListener("click", () => {
-  modal_container_top.classList.toggle("show");
-  modal_container_bottom.classList.toggle("show");
+  const modal_container_top = document.getElementById("modal_container-top");
+  const modal_container_bottom = document.getElementById("modal_container-bottom");
+  console.log(currRulerHeight);
+  modal_container_top.classList.remove(currRulerHeight);
+  modal_container_bottom.classList.remove(currRulerHeight);
+  console.log(modal_container_top);
+  console.log(rulerHeightIndex);
+  currRulerHeight = rulerHeightList[rulerHeightIndex];
+  modal_container_top.classList.add(currRulerHeight);
+  modal_container_bottom.classList.add(currRulerHeight);
+  console.log(currRulerHeight);
+  if (currRulerHeight == null) {
+
+    modal_container_top.classList.remove("show");
+    modal_container_bottom.classList.remove("show");
+  } else {
+    modal_container_top.classList.add("show");
+    modal_container_bottom.classList.add("show");
+  }
+  rulerHeightIndex = (rulerHeightIndex + 1) % rulerHeightList.length;
 });
 
 // close.addEventListener("click", () => {
