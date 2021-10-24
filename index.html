@@ -1,42 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="reader.css">
-</head>
-    <script src="reader.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class='fixed-top'>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Friendly Reader</a>
-            <button onclick="myFunction()">Toggle dark mode</button>
-            <button type="button" class="btn btn-warning" onclick="changeWidth()">Change Width</button>
-                <button type="button" onclick="changeFontSize()">
-                    Change Font Size</button>
-        </nav>
-    </div>
-    <div class="container border">
-        <div class="border">
-            <h1>How to Use</h1>
-        <p class="mt-3">Copy and paste what you want to read here ↓</p>
+    <head>
+        <title>Friend Reader</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="reader.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Friendly Reader</a>
+                <div class="row">
+                    <div class="item-frame">
+                        <input type="checkbox" id="toggleSwitch" class="checkbox" onclick="myFunction()">
+                        <label class="switch" for="toggleSwitch"></label>
+                    </div>
+                    <button type="button" class="btn btn-warning" onclick="changeWidth()">Change Width</button>
+                    <button type="button" class="btn btn-success" onclick="changeLineHeight()">Change Line Hiegh</button>
+
+                    <button type="button" onclick="changeFontSize()">Change Font Size</button>
+                    <button type="button" class="btn btn-primary" onclick="">Ruler</button>
+                    <button id="open">Click me please</button>
+                </div>
+            </nav>
+        </div>
+        <div class="container border">
+            <h1 class="text-center">How to Use</h1>
+            <p class="mt-3 text-center">Copy and paste what you want to read here ↓</p>
             <!-- <label class="">
                 <input type="text" id="inputForm">
             </label> -->
-            <h1>Input</h1>
-            <textarea id="largeInputForm" class ="center-block col-12" rows="10 cols="60" onkeyup="inputCheck()"></textarea>
-            <h1>Output</h1>
-            <div class="d-flex justify-content-center">
+            <h1 class="text-center">Input</h1>
+            <textarea id="largeInputForm" class ="center-block col-12" rows="10" cols="60" onkeyup="inputCheck()"></textarea>
+            <h1 class="text-center">Output</h1>
+            <div class="ruler h10">HELLO WORLD</div>
+            <div class="d-flex justify-content-center ｓ">
                 <div id ="outputBox" class="border w100">
                     <div id="check" class=" mt-4">
                     </div>
                 </div>
             </div>
-            <!-- <div class="mt-4 mb-4">
-
-            </div> -->
+            <div class="d-flex justify-content-center mt-4 mb-4">
+                <button type="button" class="btn btn-warning" onclick="">Export as PDF</button>
+            </div>
+            <div class="modal-container" id="modal_container">
+                <div class="myModal w100">
+                    <p>Lorem ipsum dtadfasdfasdfasdfasdfa consequuntur expedita fugiat tus laborum!</p>
+                    <button id="close">Close</button>
+                </div>
+            </div>
         </div>
-    </div>
-  </body>
+        <script src="reader.js"></script>
+    </body>
 </html>

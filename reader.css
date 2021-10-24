@@ -1,8 +1,12 @@
-body {
-  padding-top: 60px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  box-sizing: border-box;
 }
 
 body {
+  font-family: "Poppins", sans-serif;
+  padding-top: 60px;
   background-color: white;
   color: black;
   font-size: 25px;
@@ -13,9 +17,26 @@ body {
   color: white;
 }
 
-/* .outputTextBox {
-  width: 100%;
+.outputTextBox {
+  height: 300px;
+}
+
+/* .rulerTop {
+  height: 22vh;
+  width: 100vw;
+  background-color: rgb(29, 28, 28);
+}
+
+.rulerBottom {
+  height: 22vh;
+  width: 100vw;
+  background-color: rgb(29, 28, 28);
 } */
+
+.h10 {
+  height: 30px;
+}
+
 .w100 {
   width: 100%;
 }
@@ -46,4 +67,153 @@ body {
 
 .w30 {
   width: 30%;
+}
+
+.switch {
+  position: relative;
+}
+
+.switch:before,
+.switch:after {
+  content: "";
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.switch:before {
+  width: 2em;
+  height: 1em;
+  border: 2px solid lightgray;
+  border-radius: 32px;
+  background: #999;
+}
+
+.switch:after {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  background: #c4c9ff;
+  border-radius: 50%;
+  left: -2.2em;
+}
+
+input {
+  display: none;
+}
+
+input:checked ~ .switch:before {
+  background: grey;
+  border-color: black;
+}
+
+input:checked ~ .switch:after {
+  background: darkgray;
+  left: -1.1em;
+}
+/*
+.fixed01 {
+  position: sticky;
+  top: 100px;
+  color: #fff;
+  background: #333;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+  }
+} */
+
+/* .relative {
+  position: relative;
+}
+
+.absoluteTop {
+  position: absolute;
+  top: 0px;
+}
+
+.absoluteBottom {
+  position: absolute;
+  bottom: 0px;
+} */
+
+/* .fullOverlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(100, 100, 100, 0.8);
+  z-index: 2147483647;
+} */
+
+.color-overlay {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.7;
+  position: absolute;
+}
+
+/* .Frame {
+  text-align: left;
+  margin: 2rem auto 0 auto;
+  background-color: #0022c3;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  width: 420px;
+  box-shadow: 0 0 24px #4cff00;
+  mix-blend-mode: overlay;
+} */
+
+/* .textLayer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  opacity: 0.2;
+  line-height: 1;
+  background: #000;
+  opacity: 0.9;
+} */
+
+.page-container {
+  position: relative;
+}
+
+.ruler {
+  z-index: 1;
+  background-color: white;
+  opacity: 0.5;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  /* padding-top: 130px; */
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+}
+
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.myModal {
+  background-color: white;
 }
