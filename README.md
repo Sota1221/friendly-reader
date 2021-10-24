@@ -5,7 +5,7 @@ This is a reading assistant for people with dyslexia and ADHD, and for people wh
 ## How to use
 Write or paste the text you want to read in the Input field.
 
-You can change the appearance of the text output to Output using the buttons on the navigation bar above. The items that can be changed are as follows:
+You can change the appearance of the text using the buttons on the navigation bar above. The items that can be changed are as follows:
 
 * Text width
 * Text height
